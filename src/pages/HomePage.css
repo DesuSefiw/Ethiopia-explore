@@ -1,43 +1,82 @@
 /* Style for the homepage */
 .homepage {
-    text-align: center;
-    margin: 20px;
-    background-color: black;
-    color: aliceblue;
-    border-style: dashed;
+  text-align: center;
+  margin: 20px;
+  background-color: black;
+  color: aliceblue;
+  border-style: dashed;
   margin-bottom: 20px;
-    padding-bottom: 20px;
+  padding-bottom: 20px;
+  padding: 20px; /* Added padding to ensure proper spacing */
+}
 
-  }
-  /* Slideshow container to hold the images */
+/* Slideshow container to hold the images */
+.slideshow-container {
+  position: relative;
+  max-width: 50%; /* Adjust the max-width of the slideshow */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Style for each image */
+.slide {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio on all screen sizes */
+  transition: opacity 1s ease-in-out; /* Smooth transition effect */
+}
+
+/* Optional: Add some styling to the button */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(230, 57%, 46%);
+  color: white;
+}
+
+.beauty {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
   .slideshow-container {
-    position: relative;
-    max-width: 50%; /* Adjust the max-width of the slideshow */
-    margin: 0 auto;
-    overflow: hidden;
+      max-width: 80%; /* Adjust slideshow size for tablets */
   }
-  
-  /* Style for each image */
-  .slide {
-    width: 100%;
-    height: 30%;
-    transition: opacity 1s ease-in-out; /* Smooth transition effect */
-  }
-  /* Optional: Add some styling to the button */
+
   button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+      padding: 8px 16px;
+      font-size: 14px; /* Adjust button size for smaller screens */
   }
-  
-  button:hover {
-    background-color: hsl(230, 57%, 46%);
-    color: white;
+
+  .beauty {
+      font-size: 14px; /* Adjust font size for better readability */
   }
-  .beauty{
-    font-family:'Courier New', Courier, monospace
+}
+
+/* For very small screens, like mobile devices */
+@media (max-width: 480px) {
+  .slideshow-container {
+      max-width: 100%; /* Full width for mobile */
   }
+
+  .slide {
+      height: auto; /* Ensure images scale properly */
+  }
+
+  button {
+      padding: 6px 12px;
+      font-size: 12px; /* Further reduce button size for mobile */
+  }
+
+  .beauty {
+      font-size: 12px; /* Reduce font size */
+  }
+}

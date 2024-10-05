@@ -33,7 +33,7 @@ const HomePage = () => {
           className="slide"
         />
       </div>
-      <p>“The beauty of Ethiopia will captivate your heart💘💖💟.”</p>
+      <p className="beauty">“The beauty of Ethiopia will captivate your heart💘💖💟.”</p>
 
       <Link to="/about">
         <button>Learn More</button>
